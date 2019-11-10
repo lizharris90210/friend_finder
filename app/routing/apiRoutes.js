@@ -1,26 +1,18 @@
-// Your apiRoutes.js file should contain two routes:
+var friendsMatchData = require("../data/friends.js");
+var express = require("express");
+
+var app = express();
 
 
-var friendsData = require("../data/friendsData");
-// var waitListData = require("../data/waitinglistData");
-
-
-// ===============================================================================
-// ROUTING
-// ===============================================================================
-
-module.exports = function(app) {
-  // API GET Requests
-  // Below code handles when users "visit" a page.
-  // In each of the below cases when a user visits a link
-  // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
-  // ---------------------------------------------------------------------------
-// A GET route with the url /api/friends. This will be used to display a JSON of all possible friends.
+function apiRoute(app) {
   app.get("/api/friends", function(req, res) {
-    res.json(friendsData);
+    res.json(friendsMatchData);
     console.log('friendsData', friendsData)
   });
 
+
+
+}
   // API POST Requests
   // Below code handles when a user submits a form and thus submits data to the server.
   // In each of the below cases, when a user submits form data (a JSON object)
@@ -54,4 +46,4 @@ module.exports = function(app) {
 
 //     res.json({ ok: true });
 //   });
-};
+
