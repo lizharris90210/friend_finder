@@ -1,6 +1,6 @@
 # Friend_Finder
 
-![heroku](https://uncbootcampfriendfinder.herokuapp.com/)
+[heroku](https://uncbootcampfriendfinder.herokuapp.com/)
 
 ## Description
 
@@ -21,6 +21,6 @@ Use the heroku link (to where the app is live and deployed). Click the blue butt
 
 ## Credits
 
-![Liz on Github](https://github.com/lizharris90210)
-![Liz's Portfolio](https://lizharris90210.github.io/lizharris/)
+[Liz on Github](https://github.com/lizharris90210)
+[Liz's Portfolio](https://lizharris90210.github.io/lizharris/)
 This was a project completed for the UNC Full-Stack Bootcamp program. Thanks to the TAs and tutors for their support and understanding.
