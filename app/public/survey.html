@@ -195,26 +195,24 @@
 
     <div id="results-modal" class="modal fade" role="dialog">
       <div class="modal-dialog">
-
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" data-dismiss="modal">Close</button>
             <h2 class="modal-title"><strong>Best Match</strong></h2>
           </div>
           <div class="modal-body">
             <h2 id="match-name"></h2>
-            <img id="match-img" alt="">
+            <img id="match-img" alt="image">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
-
       </div>
     </div>
+
     <div id="error-modal" class="modal fade" role="dialog">
       <div class="modal-dialog">
-
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -253,11 +251,9 @@
         $(selector).chosen(config[selector]);
       }
 
-      // Capture the form inputs
       $("#submit").on("click", function (event) {
         event.preventDefault();
 
-        // Form validation
         function validateForm() {
           var isValid = true;
           $(".form-control").each(function () {
@@ -275,9 +271,7 @@
           return isValid;
         }
 
-        // If all required fields are filled
         if (validateForm()) {
-          // Create an object for the user"s data
           var userData = {
             name: $("#name").val().trim(),
             photo: $("#photo").val().trim(),
@@ -299,10 +293,7 @@
           $.post("/api/friends", userData, function(data) {
             $("#match-name").text(data.name);
             $("#match-img").attr("src", data.photo);
-            
-          // Show best match mod
             $("#results-modal").modal("toggle");
-
         });
       } else {
         alert("Please fill out all fields before submitting!");
